@@ -83,11 +83,20 @@ function game(){
         console.log("User Score: " + userScore);
         console.log("Computer Score: " + computerScore); 
 
+        let finalScore = "Player: " + userScore + " Computer: " + computerScore;
+
+        document.getElementById('output-score').innerHTML = finalScore;
+
         if (userScore > computerScore){
             console.log("Player Wins!");
+            document.getElementById('output-result').innerHTML = "Player Wins!";
         }else{
             console.log("Computer Wins!");
-        }
+            document.getElementById('output-result').innerHTML = "Computer Wins!";
+        };
+
+        
+        
     }
 
     
