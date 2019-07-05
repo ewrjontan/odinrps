@@ -84,15 +84,19 @@ function game(){
         console.log("Computer Score: " + computerScore); 
 
         let finalScore = "Player: " + userScore + " Computer: " + computerScore;
+        console.log(finalScore);
 
         document.getElementById('output-score').innerHTML = finalScore;
 
         if (userScore > computerScore){
             console.log("Player Wins!");
             document.getElementById('output-result').innerHTML = "Player Wins!";
-        }else{
+        }else if (computerScore > userScore){
             console.log("Computer Wins!");
             document.getElementById('output-result').innerHTML = "Computer Wins!";
+        }else{
+            console.log("It is a tie!");
+            document.getElementById('output-result').innerHTML = "It is a tie!";
         };
 
         
@@ -102,4 +106,4 @@ function game(){
     
 }
 
-game();
+window.onload = game();
